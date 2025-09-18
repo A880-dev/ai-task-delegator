@@ -9,7 +9,7 @@ load_dotenv()
 api_key = os.getenv("GROQ_API_KEY")
 
 # Initialize Groq client
-client = Groq(api_key=api_key)
+client = Groq(api_key="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")
 
 def delegate_task(task):
     prompt = f"""
@@ -27,7 +27,7 @@ Return the result in neat bullet points like this:
 """
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {"role": "user", "content": prompt}
         ]
