@@ -9,7 +9,7 @@ load_dotenv()
 api_key = os.getenv("GROQ_API_KEY")
 
 # Initialize Groq client
-client = Groq(api_key="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")
+client = Groq(api_key=api_key)
 
 def delegate_task(task):
     prompt = f"""
